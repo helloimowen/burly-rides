@@ -1,0 +1,43 @@
+/*
+
+The list of Social icon files (32px)
+
+addthis_32.png
+email_32.png
+facebook_32.png
+github_32.png
+google_32.png
+reddit_32.png
+skype_32.png
+twitter_32.png
+
+*/
+
+
+/* Circular 32x32 px ------------------------------------------------------------*/
+
+.social .addthis{ background: url(../img/icons/circular/addthis_32.png); }
+.social .email{ background: url(../img/icons/circular/email_32.png); }
+.social .facebook{ background: url(../img/icons/circular/facebook_32.png); }
+.social .github{ background: url(../img/icons/circular/github_32.png); }
+.social .google{ background: url(../img/icons/circular/google_32.png); }
+.social .reddit{ background: url(../img/icons/circular/reddit_32.png); }
+.social .skype{ background: url(../img/icons/circular/skype_32.png); }
+.social .windows{ background: url(../img/icons/circular/windows_32.png); }
+
+
+/* rounded 32x32 px ------------------------------------------------------------*/
+
+.rounded .addthis{ background: url(../img/icons/rounded-square/addthis_32.png); }
+.rounded .email{ background: url(../img/icons/rounded-square/email_32.png); }
+.rounded .github{ background: url(../img/icons/rounded-square/github_32.png); }
+.rounded .google{ background: url(../img/icons/rounded-square/google_32.png); }
+.rounded .reddit{ background: url(../img/icons/rounded-square/reddit_32.png); }
+.rounded .skype{ background: url(../img/icons/rounded-square/skype_32.png); }
+.rounded .windows{ background: url(../img/icons/rounded-square/windows_32.png); }
+
+
+
+
+
+
