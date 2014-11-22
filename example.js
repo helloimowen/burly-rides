@@ -2,8 +2,8 @@ var http = require('http');
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/plain'});
   res.end('Hello World\n');
-}).listen(1337, '127.0.0.1');
-console.log('Server running at http://127.0.0.1:1337/');
+}).listen(3000, '127.0.0.1');
+console.log('Server running at http://127.0.0.1:3000/... http://3000 or something...');
 
 
 
@@ -17,11 +17,11 @@ var twit = new twitter({
 });
 
 
-twit.search('lol', function(data) {
+twit.search('burlyrides OR #burlyrides', function(data) {
     console.log(util.inspect(data));
 	
 });
-
+//still having trouble finding kyle's stuff. 
 
 
 //app.get('/', twit.gatekeeper('/login'), routes.index);
