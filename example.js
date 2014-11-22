@@ -1,12 +1,18 @@
-var http = require('http');
-http.createServer(function (req, res) {
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.end('Hello World\n');
-}).listen(3000, '127.0.0.1');
-console.log('Server running at http://127.0.0.1:3000/... http://3000 or something...');
 
+var app = require('express')();
+var http = require('http').Server(app);
 
-
+app.get('/', function(req, res){
+  res.sendFile(__dirname + '/workspace/rideclub_proto.html');
+});
+app.get('/', function(req, res){
+  res.sendFile(__dirname + '/workspace/css/style.css');
+});
+http.listen(3000, function(){
+  console.log('Server running at http://127.0.0.1:3000/... http://3000 or something...');
+});
+/*
+//twitter stuff. Will use l8r
 var util = require('util'),
     twitter = require('twitter');
 var twit = new twitter({
@@ -23,7 +29,7 @@ twit.search('burlyrides OR #burlyrides', function(data) {
 });
 //still having trouble finding kyle's stuff. 
 
-
-//app.get('/', twit.gatekeeper('/login'), routes.index);
-//app.get('/login', routes.login);
-//app.get('/twauth', twit.login());
+app.get('/', twit.gatekeeper('/login'), routes.index);
+app.get('/login', routes.login);
+app.get('/twauth', twit.login());
+*/
