@@ -1,6 +1,7 @@
 <!DOCTYPE  html>
 <html>
 	<head>
+		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
 		<meta charset="utf-8">
 		<title>RideClub</title>
 		
@@ -10,41 +11,28 @@
 		<link rel="stylesheet" href="css/icons.css" type="text/css" media="screen" />
 		<!-- ENDS CSS -->	
 		
-		<!-- GOOGLE FONTS 
-		<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>-->
-		
-		<!-- JS -->
-		<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-		<script type="text/javascript" src="js/custom.js"></script>
-		<!-- ENDS JS -->
-		
-		<!-- Isotope -->
-		<script src="js/jquery.isotope.min.js"></script>
-
-
-		<!-- tabs -->
-		<link rel="stylesheet" href="css/tabs.css" type="text/css" media="screen" />
-		<script type="text/javascript" src="js/tabs.js"></script>
-  		<!-- ENDS tabs -->
-
-		
-		<!-- superfish -->
-		<link rel="stylesheet" media="screen" href="css/superfish.css" />
-		<script type="text/javascript" src="js/superfish-1.4.8/js/hoverIntent.js"></script>
-		<script type="text/javascript" src="js/superfish-1.4.8/js/superfish.js"></script>
-		<script type="text/javascript" src="js/superfish-1.4.8/js/supersubs.js"></script>
-		<!-- ENDS superfish -->
 	
-		
-		<!-- Tweet -->
-		<link rel="stylesheet" href="css/jquery.tweet.css" media="all"  type="text/css"/> 
-		<script src="js/tweet/jquery.tweet.js" type="text/javascript"></script> 
-		<!-- ENDS Tweet -->
-		
-
 	</head>
 .
-	<body>
+	<body>	
+	
+	<!-- leaflet test stuff -->
+			<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
+			<div id="map">
+			<style>
+			#map { height: 400px; }
+			</style>
+				<script>
+			var map = L.map('map').setView([44.473294, -73.203171], 18);
+
+			L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+				attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+			}).addTo(map);
+
+			</script>
+
+			</div>
 
 			<!-- HEADER -->
 			<div id="header">
