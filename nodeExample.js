@@ -2,18 +2,29 @@
 var app = require('express')();
 var http = require('http').Server(app);
 
+
+
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/workspace/rideclub_proto.html');
+  
+
 });
 
-
-app.get('/', function(req, res){
-  res.sendFile(__dirname + '/workspace/css');
-});
+//app.use("/", express.static(__dirname + '/workspace/css')); //need to redefine 'app' and 'express'
 
 http.listen(3000, function(){
   console.log('Server running at http://127.0.0.1:3000/... http://3000 or something...');
 });
+
+
+
+
+
+
+
+
+
+
 /*
 //twitter stuff. Will use l8r
 var util = require('util'),
@@ -26,11 +37,11 @@ var twit = new twitter({
 });
 
 
-twit.search('burlyrides OR #burlyrides', function(data) {
+twit.search('#tybg', function(data) {
     console.log(util.inspect(data));
 	
 });
-//still having trouble finding kyle's stuff. 
+//still having trouble finding kyle's tweetz. It does pull in popular hashtags though!
 
 app.get('/', twit.gatekeeper('/login'), routes.index);
 app.get('/login', routes.login);
