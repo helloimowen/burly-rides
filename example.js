@@ -5,9 +5,12 @@ var http = require('http').Server(app);
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/workspace/rideclub_proto.html');
 });
+
+
 app.get('/', function(req, res){
-  res.sendFile(__dirname + '/workspace/css/style.css');
+  res.sendFile(__dirname + '/workspace/css');
 });
+
 http.listen(3000, function(){
   console.log('Server running at http://127.0.0.1:3000/... http://3000 or something...');
 });
