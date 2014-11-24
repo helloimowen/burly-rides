@@ -92,10 +92,10 @@ right: 0px;
 width: 100%;
 padding-top: 1px;
 margin-bottom: 0px;
-background: #3a595e;
-background: -webkit-gradient(linear, left top, right bottom, from(#3a595e), to(#00616f));
-background: -moz-linear-gradient(left, #3a595e, #00616f);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3a595e', endColorstr='#00616f', GradientType=1);
+background: #343737;
+background: -webkit-gradient(linear, left top, right bottom, from(#343737), to(#525252));
+background: -moz-linear-gradient(left, #343737, #525252);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#343737', endColorstr='#525252', GradientType=1);
 }
 #menu-holder{
 width: 100%;
