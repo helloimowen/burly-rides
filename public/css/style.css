@@ -3,8 +3,8 @@
 *
 */
 /* IMPORTS ------------------------------------------------------------*/
-@import url('reset.css');
-@import url('styled-elements.css');
+/*@import url('reset.css');*/
+/*@import url('styled-elements.css');*/
 /* HACKS ------------------------------------------------------------*/
 .clear{
 clear:both;
@@ -18,8 +18,7 @@ margin: 5px 10px 5px 0px;
 /* GENERAL ------------------------------------------------------------*/
 body {
 line-height: 1;
-color: #51565b;
-background: #f1f1f1 url(../img/bg/patterns/noise.png);
+color: #5f6062;
 font-family: Arial, Helvetica, sans-serif;
 font-size: 100%;
 }
@@ -70,7 +69,7 @@ margin: 20px auto 50px auto;
 #headline>span.main{
 display: block;
 margin-right: 170px;
-font-family: 'Ubuntu', arial, serif;
+font-family: Verdana, arial, serif;
 font-size: 26px;
 line-height: 1.5em;
 text-shadow: 1px 1px rgba(255, 255, 255, 1);
@@ -178,21 +177,6 @@ border-radius: 0px 0px 10px 10px;
 -moz-border-radius: 0px 0px 10px 10px;
 -webkit-border-radius: 0px 0px 10px 10px;
 }
-/* slash --------------------------------------------------------*/
-#header #slash{
-position: absolute;
-bottom: 11px;
-left: 30px;
-font-style: italic;
-color: #999;
-font-size: 10px;
-}
-#header #slash a{
-color: #bfbdbd;
-text-decoration: none;
-background: url(../img/slash.png) no-repeat top right;
-padding-right: 14px;
-}
 /* TITLE --------------------------------------------------------*/
 #page-title{
 overflow: hidden;
@@ -204,7 +188,7 @@ text-shadow: 1px 1px rgba(255, 255, 255, 1);
 #page-title .title{
 display: block;
 float: left;
-font-family: 'Ubuntu', arial, serif;
+font-family: Verdana, arial, serif;
 font-size: 40px;
 line-height: 103px;
 margin-left: 30px;
@@ -222,7 +206,7 @@ font-style: italic;
 /* HEADERS --------------------------------------------------------*/
 h1,h2,h3,h4,h5,h6{
 line-height: 1.4em;
-font-family: 'Ubuntu', arial, serif;
+font-family: Verdana, arial, serif;
 font-weight: lighter;
 }
 h1{ font-size: 30px; }
@@ -231,79 +215,7 @@ h3{ font-size: 26px; }
 h4{ font-size: 24px; }
 h5{ font-size: 22px; }
 h6{ font-size: 20px; }
-/* COLUMNS LAYOUT----------------------------------------------------------*/
-.one-half,
-.one-third,
-.two-third,
-.three-fourth,
-.one-fourth {
-float:left;
-margin-right:30px;
-position:relative;
-}
-.one-half{ width: 438px; }
-.one-third{ width: 282px; }
-.one-fourth{ width: 204px; }
-.two-third{ width: 594px; }
-.three-fourth{ width: 672px; }
-.last {
-clear:right;
-margin-right:0 !important;
-}
-/*search*/
-/* FILTER --------------------------------------------------------*/
-#content .filter{
-display: block;
-overflow: hidden;
-margin-bottom: 30px;
-padding-left: 30px;
-padding-right: 30px;
-}
-#content .filter li{
-display: block;
-float: left;
-font-size: 12px;
-line-height: 14px;
-margin-right: 5px;
-margin-bottom: 10px;
-padding: 3px 10px;
-border-radius: 10px;
--moz-border-radius: 10px;
--webkit-border-radius: 10px;
-background: #d1d1d1;
-background: -webkit-gradient(linear, left top, left bottom, from(#d1d1d1), to(#f1f1f1));
-background: -moz-linear-gradient(top, #d1d1d1, #f1f1f1);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d1d1d1', endColorstr='#f1f1f1', GradientType=0);
-border-top: 1px solid #bcbcbc;
-}
-#content .filter li a{
-display: block;
-color: #606060;
-text-decoration: none;
-width: 100%;
-height: 100%;
-}
-#content .filter li:first-child:hover{
-background: none;
-}
-#content .filter li.active,
-#content .filter li:hover{
-background: #000;
--webkit-box-shadow: 0px 1px 2px rgba(0,0,0,.5);
--moz-box-shadow: 0px 1px 2px rgba(0,0,0,.5);
-box-shadow: 0px 1px 2px rgba(0,0,0,.5);
-}
-#content .filter li:hover a,
-#content .filter li.active a{
-color: #f1f1f1;
-}
-#content .filter li:first-child,
-#content .filter li:first-child:hover{
-background: none;
-border: none;
--webkit-box-shadow: 0px 0px 0px rgba(0,0,0,.0);
--moz-box-shadow: 0px 0px 0px rgba(0,0,0,.0);
-box-shadow: 0px 0px 0px rgba(0,0,0,.0);
+
 }
 /* TWITTER --------------------------------------------------------*/
 #twitter{
@@ -368,72 +280,7 @@ color: #ccc;
 padding-top: 16px;
 font-style: italic;
 }
-/* PAGES --------------------------------------------------------*/
-#page-content{
-float: left;
-width: 906px;
-margin-left: 30px;
-line-height: 1.5em;
-}
-/* Aesthetic --------------------------------------------------------*/
-#aesthetic{
-overflow: hidden;
-}
-#aesthetic .aesthetic h1 a{
-display: block;
-text-decoration: none;
-margin-bottom: 20px;
-color: #51565b;
-}
-.aesthetic-shadow{
-background: url(../img/shadow.png) no-repeat 0px 267px;
-}
-#aesthetic .aesthetic .aesthetic-thumbnail{
-position: relative;
-overflow: hidden;
-width: 438px;
-height: 267px;
-margin-bottom: 20px;
-background: #f1f1f1;
-border-radius: 10px;
--moz-border-radius: 10px;
--webkit-border-radius: 10px;
-}
-/* CONTACT --------------------------------------------------------*/
-.one-column{
-width: 438px;
-float: left;
-margin-left: 30px;
-}
-/* SIDEBAR ------------------------------------------------------------*/
-#sidebar{
-float: left;
-width: 282px;
-margin-left: 30px;
-}
-#sidebar>li{
-margin-bottom: 20px;
-}
-#sidebar>li h6{
-padding-bottom: 20px;
-}
-#sidebar ul>li{
-font-size: 14px;
-line-height: 40px;
-text-decoration: none;
-border-bottom: 1px solid #d7d7d7;
-}
-#sidebar ul>li:last-child{ border-bottom: none; }
-#sidebar ul>li a{
-display: block;
-height: 100%;
-width: 100%;
-text-decoration: none;
-color: #696969;
-}
-#sidebar ul>li:hover{
-background: #f1f1f1;
-}
+
 /* SOCIAL --------------------------------------------------------*/
 .social{
 position: absolute;
