@@ -97,6 +97,9 @@ function onLocationFound(e) {
 
     L.circle(e.latlng, radius).addTo(map);
 }
+    L.marker([44.473294, -73.203171]).addTo(map)
+        .bindPopup("Here be mobiledev.").openPopup();
+
 
 map.on('locationfound', onLocationFound);
 </script>
