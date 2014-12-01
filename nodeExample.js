@@ -6,6 +6,7 @@ var http = require('http');
 var server = http.createServer(app)
 var fs = require('fs')
 var io = require('socket.io').listen(server);
+var sentiment = require('sentiment');
 
 
 app.get('/', function(req, res){
@@ -18,10 +19,11 @@ server.listen(3000, function(){
 console.log('Server running at http://127.0.0.1:3000/... http://3000 or something...');
 });
 
-var flag = ['burlyrides', 'rides']
+var sentTest = sentiment('Yeah. I can do the right thing the wrong way, I can peel all the stressors from a long day... She loves me like she means it ') //-busdriver
+console.dir(sentTest);
 
 
-//twitter stuff. Will use l8r
+//twitter stuff.
 var util = require('util'),
 twitter = require('twitter');
 
@@ -31,6 +33,15 @@ consumer_secret: '',
 access_token_key: '',
 access_token_secret: ''
 });
+
+twit.search('#burlyrides', function(data) {
+console.log(util.inspect(data));
+});
+
+
+
+/*
+var flag = ['burlyrides', 'rides']
 
 io.sockets.on('connection', function (socket) {
   console.log('woah! This actually worked!');
@@ -43,10 +54,6 @@ io.sockets.on('connection', function (socket) {
     io.sockets.emit('stream',tweet.text);
  });
 }); 
-
-/*
-twit.search('#burlyrides', function(data) {
-console.log(util.inspect(data));
-});
-
 */
+
+
