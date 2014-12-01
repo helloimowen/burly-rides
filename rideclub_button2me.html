@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+<meta charset="utf-8">
+<title>RideClub</title>
+
+<!-- CSS -->
+<!--DOES NOT PULL CSS WHEN NODE IS USED!!-->
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/icons.css" type="text/css" media="screen" />
+<!-- ENDS CSS -->	
+
+<!--JS-->
+<script src="jquery-1.11.1.min.js"></script>
+<!--END JS-->
+</head>
+.
+<body>
+<!-- HEADER -->
+<div id="header">
+<!-- wrapper-header -->
+<div class="wrapper">
+<a href="index.html"><img id="logo" src="img/logo.png" alt="RideClub" /></a>
+<!--Search-->
+</div>
+<!-- ENDS wrapper-header -->	
+</div>
+<!-- ENDS HEADER -->
+<!-- Menu -->
+<div id="menu">
+<!-- ENDS menu-holder -->
+<div id="menu-holder">
+<!-- wrapper-menu -->
+<div class="wrapper">
+<!-- Navigation -->
+<ul id="nav" class="sf-menu">
+<li><a href="tutorial.html">Home<span class="subheader"> Welcome</span></a></li>
+<li><a href="features.html">Features<span class="subheader"> Learn more here!</span></a>
+<!--
+<ul>
+<li><a href="features-call_a_ride.html"><span> Columns layout</span></a></li>
+<li><a href="features-friends.html"><span> Accordion</span></a></li>
+<li><a href="features-how_to.html"><span> Toggle box</span></a></li>
+</ul>
+-->
+</li>
+<li><a href="contact.html">Contact<span class="subheader"> (Give us feedback!)</span></a></li>
+</ul>
+<!-- Navigation -->
+</div>
+<!-- wrapper-menu -->
+</div>
+<!-- ENDS menu-holder -->
+</div>
+<!-- ENDS Menu -->
+<!-- MAIN -->
+<div id="main">
+<!-- wrapper-main -->
+<div class="wrapper">
+<!-- shadow -->
+<div class="aesthetic-shadow">
+<!-- aesthetic-thumb -->
+<div class="aesthetic-thumbnail">
+<!-- meta -->
+<ul class="meta">
+<h1><b>Map</b></h1>
+<li><strong>Default Location: </strong>Burlington, VT</li>
+<li><strong>Plugin:</strong> Leaflet</li>
+<button onclick="map.locate({setView: true, maxZoom: 16});">Get Location</button>
+</ul>
+<!-- ENDS meta -->
+<!--
+<a href="aesthetic.html" class="cover"><img src="NULL" alt="Map-Goes-HERE" /></a>
+-->
+</div>
+<!-- ENDS aesthetic-thumb -->
+<!-- leaflet test stuff -->
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+<div id="map">
+<style>
+#map { height: 400px; }
+</style>
+<script>
+var map = L.map('map').setView([44.473294, -73.203171], 18);
+L.tileLayer('http://otile1.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
+attribution: '&copy; <a href="http://osm.org/copyright">OSM</a> and mapquest'
+}).addTo(map);
+
+map.on('locationfound', onLocationFound);
+
+function onLocationFound(e) {
+    var radius = e.accuracy / 2;
+
+    L.marker(e.latlng).addTo(map)
+        .bindPopup("You are within " + radius + " meters from this point").openPopup();
+
+    L.circle(e.latlng, radius).addTo(map);
+}
+
+map.on('locationfound', onLocationFound);
+
+</script>
+</div>
+</div>
+<!-- ENDS shadow -->
+</div>
+<!-- ENDS aesthetic -->
+<!-- aesthetic -->
+<div class="aesthetic">
+<h1><a href="aesthetic.html">App Information</a></h1>
+<!-- shadow -->
+<div class="aesthetic-shadow">
+<!-- aesthetic-thumb -->
+<div class="aesthetic-thumbnail">
+<!-- meta -->
+<ul class="meta">
+<li><strong>Notify Us: </strong>pinkerton.john@gmail.com</li>
+</ul>
+<!-- ENDS meta -->
+</body>
+</html>
