@@ -6,7 +6,7 @@
 <meta charset="utf-8">
 <title>RideClub</title>
 <!-- CSS -->
-<!--DOES NOT PULL CSS WHEN NODE IS USED!!-->
+
 <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="css/icons.css" type="text/css" media="screen" />
 <!-- ENDS CSS -->	
@@ -82,32 +82,34 @@ L.tileLayer('http://otile1.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
 attribution: '&copy; <a href="http://osm.org/copyright">OSM</a> and mapquest'
 }).addTo(map);
 </script>
-
- <script src="nodeExample.js"></script>
-  <script>
-        if(_socket) {
-            _socket.emit(signal, o);
-        }
-        else {
-            alert("Socket.io didn't start!");
-        }
+<!--
+<script src="nodeExample.js"></script>
+<script>
+if(_socket) {
+_socket.emit(signal, o);
+}
+else {
+alert("Socket.io didn't start!");
+}
         
         
-        var socket = io.connect('http://localhost:3000');
-        socket.on('stream', function(tweet){
-        $('#tweetd').append(tweet+'<br>');
-        });
-            function emitMsj(signal, o) {
+var socket = io.connect('http://localhost:3000');
+socket.on('stream', function(tweet){
+$('#tweetd').append(tweet+'<br>');
+});
+function emitMsj(signal, o) {
       
-    }
-  </script>
-  <div id="tweetd"></div>
+}
+</script>
+<div id="tweetd"></div>
+-->
 </div>
 
 
 
 </div>
 </div>
+
 <!-- ENDS shadow -->
 </div>
 <!-- ENDS aesthetic -->
