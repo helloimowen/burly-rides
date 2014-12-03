@@ -10,8 +10,8 @@ app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
 
 //twitter stuff.
-var util = require('util'),
-twitter = require('twitter');
+var util = require('util');
+var twitter = require('twitter');
 
 var twit = new twitter({
 consumer_key: '',
@@ -19,6 +19,9 @@ consumer_secret: '',
 access_token_key: '',
 access_token_secret: ''
 });
+
+
+
 
 /*
 app.get('/', function(req, res) {
@@ -32,21 +35,34 @@ app.get('/', function(req, res) {
 
 });
 */
+
+
+
 app.get('/', function(req, res) {
     twit.search('#tybg', function(data) {
-        var stringTw = JSON.stringify(dataTw);
-        var JSONTw = JSON.parse(stringificationTw);
-            callback(JSONTw);
+        var stringTw = JSON.stringify(data);
+        var JSONTw = JSON.parse(stringTw);
         
-    });
 
-    var test = "I hate myself and I want to die.";
+        
+        //console.log(util.inspect(data));
+        //console.log(util.inspect(data));
+        //console.log(util.inspect(JSONTw));
+
+    
+    var test = "___Everything hurts and I want to die.";
+    
+  
+        
     
 	res.render('rideclub_proto', {
+        data : data,
+        stringTw : stringTw,
         JSONTw : JSONTw,
         test : test
         });
-   
+   });
+
 });
 
 
