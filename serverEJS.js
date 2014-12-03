@@ -50,7 +50,7 @@ app.get('/', function(req, res) {
         //console.log(util.inspect(JSONTw));
 
     
-    var test = "___Everything hurts and I want to die.";
+    var test = "___I am tired. Help.";
     
   
         

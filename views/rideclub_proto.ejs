@@ -64,10 +64,13 @@
 
 
 <h3>
+<!-- This will messily display all of the tweets on the page. -->
+
 Twitter should go here? 
 
 <%=stringTw%>
 
+<!-- This will messily display all of the tweets on the page. -->
 
 
 </h3>
@@ -79,6 +82,7 @@ Twitter should go here?
 <li><strong>Default Location: </strong>Burlington, VT</li>
 <li><strong>Plugin:</strong> Leaflet</li>
 </ul>
+<button onclick="map.locate({setView: true, maxZoom: 16});">Get Location</button>
 <!-- ENDS meta -->
 <!--
 <a href="aesthetic.html" class="cover"><img src="NULL" alt="Map-Goes-HERE" /></a>
@@ -96,6 +100,22 @@ var map = L.map('map').setView([44.473294, -73.203171], 18);
 L.tileLayer('http://otile1.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
 attribution: '&copy; <a href="http://osm.org/copyright">OSM</a> and mapquest'
 }).addTo(map);
+
+map.on('locationfound', onLocationFound);
+
+function onLocationFound(e) {
+    var radius = e.accuracy / 2;
+
+    L.marker(e.latlng).addTo(map)
+        .bindPopup("You are within " + radius + " meters from this point").openPopup();
+
+    L.circle(e.latlng, radius).addTo(map);
+}
+    L.marker([44.473294, -73.203171]).addTo(map)
+        .bindPopup("Here be mobiledev.").openPopup();
+
+
+map.on('locationfound', onLocationFound);
 </script>
 
 
