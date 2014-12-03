@@ -60,6 +60,20 @@
 <div class="aesthetic-thumbnail">
 <!-- meta -->
 <ul class="meta">
+<h1>
+
+
+<%=test%>
+<% JSONTw.forEach(function(displayTweet) { %>
+    <%= displayTweet.text %> 
+<% }); %>
+
+
+</h1>
+
+
+
+
 <h1><b>Map</b></h1>
 <li><strong>Default Location: </strong>Burlington, VT</li>
 <li><strong>Plugin:</strong> Leaflet</li>
@@ -82,27 +96,12 @@ L.tileLayer('http://otile1.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
 attribution: '&copy; <a href="http://osm.org/copyright">OSM</a> and mapquest'
 }).addTo(map);
 </script>
-<!--
-<script src="nodeExample.js"></script>
-<script>
-if(_socket) {
-_socket.emit(signal, o);
-}
-else {
-alert("Socket.io didn't start!");
-}
-        
-        
-var socket = io.connect('http://localhost:3000');
-socket.on('stream', function(tweet){
-$('#tweetd').append(tweet+'<br>');
-});
-function emitMsj(signal, o) {
-      
-}
-</script>
-<div id="tweetd"></div>
--->
+
+
+
+<h1><%=test%></h1>
+
+
 </div>
 
 
