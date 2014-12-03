@@ -50,6 +50,17 @@
 <!-- ENDS menu-holder -->
 </div>
 <!-- ENDS Menu -->
+
+
+
+
+
+
+
+
+
+
+
 <!-- MAIN -->
 <div id="main">
 <!-- wrapper-main -->
@@ -79,8 +90,13 @@ Twitter should go here?
 
 
 <h1><b>Map1</b></h1>
-<li><strong>Default Location: </strong>Burlington, VT</li>
-<li><strong>Plugin:</strong> Leaflet</li>
+<h2>
+<li><strong><%=fakeTwitter[0].name%>: </strong><%=fakeTwitter[0].text%></li>
+<li><strong>Lat:</strong> <%=fakeTwitter[0].lat%></li>
+<li><strong>Lon:</strong> <%=fakeTwitter[0].lon%></li>
+
+
+</h2>
 </ul>
 <button onclick="map1.locate({setView: true, maxZoom: 16});">Get Location</button>
 <!-- ENDS meta -->
@@ -96,7 +112,7 @@ Twitter should go here?
 #map1 { height: 400px; }
 </style>
 <script>
-var map1 = L.map('map1').setView([44.473294, -73.203171], 18);
+var map1 = L.map('map1').setView([<%=fakeTwitter[0].lat%>, <%=fakeTwitter[0].lon%>], 18);
 L.tileLayer('http://otile1.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
 attribution: '&copy; <a href="http://osm.org/copyright">OSM</a> and mapquest'
 }).addTo(map1);
@@ -111,8 +127,8 @@ function onLocationFound(e) {
 
     L.circle(e.latlng, radius).addTo(map1);
 }
-    L.marker([44.473294, -73.203171]).addTo(map1)
-        .bindPopup("Here be mobiledev.").openPopup();
+    L.marker([<%=fakeTwitter[0].lat%>, <%=fakeTwitter[0].lon%>]).addTo(map1)
+        .bindPopup("<%=fakeTwitter[0].name%>").openPopup();
 
 
 map1.on('locationfound', onLocationFound);
@@ -162,8 +178,13 @@ This will messily display all of the tweets on the page. -->
 
 
 <h1><b>Map2</b></h1>
-<li><strong>Default Location: </strong>Burlington, VT</li>
-<li><strong>Plugin:</strong> Leaflet</li>
+<h2>
+<li><strong><%=fakeTwitter[1].name%>: </strong><%=fakeTwitter[1].text%></li>
+<li><strong>Lat:</strong> <%=fakeTwitter[1].lat%></li>
+<li><strong>Lon:</strong> <%=fakeTwitter[1].lon%></li>
+
+
+</h2>
 </ul>
 <button onclick="map2.locate({setView: true, maxZoom: 16});">Get Location</button>
 <!-- ENDS meta -->
@@ -179,7 +200,7 @@ This will messily display all of the tweets on the page. -->
 #map2 { height: 400px; }
 </style>
 <script>
-var map2 = L.map('map2').setView([44.473294, -73.203171], 18);
+var map2 = L.map('map2').setView([<%=fakeTwitter[1].lat%>, <%=fakeTwitter[1].lon%>], 18);
 L.tileLayer('http://otile1.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
 attribution: '&copy; <a href="http://osm.org/copyright">OSM</a> and mapquest'
 }).addTo(map2);
@@ -194,8 +215,8 @@ function onLocationFound(e) {
 
     L.circle(e.latlng, radius).addTo(map2);
 }
-    L.marker([44.473294, -73.203171]).addTo(map2)
-        .bindPopup("Here be mobiledev.").openPopup();
+    L.marker([<%=fakeTwitter[1].lat%>, <%=fakeTwitter[1].lon%>]).addTo(map2)
+        .bindPopup("<%=fakeTwitter[1].name%>").openPopup();
 
 
 map2.on('locationfound', onLocationFound);
@@ -246,8 +267,13 @@ Twitter should go here?
 
 
 <h1><b>Map3</b></h1>
-<li><strong>Default Location: </strong>Burlington, VT</li>
-<li><strong>Plugin:</strong> Leaflet</li>
+<h2>
+<li><strong><%=fakeTwitter[2].name%>: </strong><%=fakeTwitter[2].text%></li>
+<li><strong>Lat:</strong> <%=fakeTwitter[2].lat%></li>
+<li><strong>Lon:</strong> <%=fakeTwitter[2].lon%></li>
+
+
+</h2>
 </ul>
 <button onclick="map3.locate({setView: true, maxZoom: 16});">Get Location</button>
 <!-- ENDS meta -->
@@ -263,7 +289,7 @@ Twitter should go here?
 #map3 { height: 400px; }
 </style>
 <script>
-var map3 = L.map('map3').setView([44.473294, -73.203171], 18);
+var map3 = L.map('map3').setView([<%=fakeTwitter[2].lat%>, <%=fakeTwitter[2].lon%>], 18);
 L.tileLayer('http://otile1.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
 attribution: '&copy; <a href="http://osm.org/copyright">OSM</a> and mapquest'
 }).addTo(map3);
@@ -278,8 +304,8 @@ function onLocationFound(e) {
 
     L.circle(e.latlng, radius).addTo(map3);
 }
-    L.marker([44.473294, -73.203171]).addTo(map3)
-        .bindPopup("Here be mobiledev.").openPopup();
+    L.marker([<%=fakeTwitter[2].lat%>, <%=fakeTwitter[2].lon%>]).addTo(map3)
+        .bindPopup("<%=fakeTwitter[2].name%>").openPopup();
 
 
 map3.on('locationfound', onLocationFound);
@@ -303,14 +329,14 @@ map3.on('locationfound', onLocationFound);
 <!-- ENDS aesthetic -->
 <!-- aesthetic -->
 <div class="aesthetic">
-<h1><a href="aesthetic.html">App Information</a></h1>
+
 <!-- shadow -->
 <div class="aesthetic-shadow">
 <!-- aesthetic-thumb -->
 <div class="aesthetic-thumbnail">
 <!-- meta -->
 <ul class="meta">
-<li><strong>Notify Us: </strong>pinkerton.john@gmail.com</li>
+
 </ul>
 <!-- ENDS meta -->
 </body>
