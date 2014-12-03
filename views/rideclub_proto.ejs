@@ -63,26 +63,26 @@
 
 
 
-<h3>
-<!-- This will messily display all of the tweets on the page. -->
+
+<!-- This will messily display all of the tweets on the page. 
 
 Twitter should go here? 
 
 <%=stringTw%>
 
-<!-- This will messily display all of the tweets on the page. -->
-
-
-</h3>
+ This will messily display all of the tweets on the page. -->
 
 
 
 
-<h1><b>Map</b></h1>
+
+
+
+<h1><b>Map1</b></h1>
 <li><strong>Default Location: </strong>Burlington, VT</li>
 <li><strong>Plugin:</strong> Leaflet</li>
 </ul>
-<button onclick="map.locate({setView: true, maxZoom: 16});">Get Location</button>
+<button onclick="map1.locate({setView: true, maxZoom: 16});">Get Location</button>
 <!-- ENDS meta -->
 <!--
 <a href="aesthetic.html" class="cover"><img src="NULL" alt="Map-Goes-HERE" /></a>
@@ -91,31 +91,31 @@ Twitter should go here?
 <!-- ENDS aesthetic-thumb -->
 <!-- leaflet test stuff -->
 <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
-<div id="map">
+<div id="map1">
 <style>
-#map { height: 400px; }
+#map1 { height: 400px; }
 </style>
 <script>
-var map = L.map('map').setView([44.473294, -73.203171], 18);
+var map1 = L.map('map1').setView([44.473294, -73.203171], 18);
 L.tileLayer('http://otile1.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
 attribution: '&copy; <a href="http://osm.org/copyright">OSM</a> and mapquest'
-}).addTo(map);
+}).addTo(map1);
 
-map.on('locationfound', onLocationFound);
+map1.on('locationfound', onLocationFound);
 
 function onLocationFound(e) {
     var radius = e.accuracy / 2;
 
-    L.marker(e.latlng).addTo(map)
+    L.marker(e.latlng).addTo(map1)
         .bindPopup("You are within " + radius + " meters from this point").openPopup();
 
-    L.circle(e.latlng, radius).addTo(map);
+    L.circle(e.latlng, radius).addTo(map1);
 }
-    L.marker([44.473294, -73.203171]).addTo(map)
+    L.marker([44.473294, -73.203171]).addTo(map1)
         .bindPopup("Here be mobiledev.").openPopup();
 
 
-map.on('locationfound', onLocationFound);
+map1.on('locationfound', onLocationFound);
 </script>
 
 
@@ -132,6 +132,174 @@ map.on('locationfound', onLocationFound);
 
 <!-- ENDS shadow -->
 </div>
+
+
+<!-- MAIN -->
+<div id="main">
+<!-- wrapper-main -->
+<div class="wrapper">
+<!-- shadow -->
+<div class="aesthetic-shadow">
+<!-- aesthetic-thumb -->
+<div class="aesthetic-thumbnail">
+<!-- meta -->
+<ul class="meta">
+
+
+
+<!-- This will messily display all of the tweets on the page.
+
+Twitter should go here? 
+
+<%=stringTw%>
+
+This will messily display all of the tweets on the page. -->
+
+
+
+
+
+
+
+<h1><b>Map2</b></h1>
+<li><strong>Default Location: </strong>Burlington, VT</li>
+<li><strong>Plugin:</strong> Leaflet</li>
+</ul>
+<button onclick="map2.locate({setView: true, maxZoom: 16});">Get Location</button>
+<!-- ENDS meta -->
+<!--
+<a href="aesthetic.html" class="cover"><img src="NULL" alt="Map-Goes-HERE" /></a>
+-->
+</div>
+<!-- ENDS aesthetic-thumb -->
+<!-- leaflet test stuff -->
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+<div id="map2">
+<style>
+#map2 { height: 400px; }
+</style>
+<script>
+var map2 = L.map('map2').setView([44.473294, -73.203171], 18);
+L.tileLayer('http://otile1.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
+attribution: '&copy; <a href="http://osm.org/copyright">OSM</a> and mapquest'
+}).addTo(map2);
+
+map2.on('locationfound', onLocationFound);
+
+function onLocationFound(e) {
+    var radius = e.accuracy / 2;
+
+    L.marker(e.latlng).addTo(map2)
+        .bindPopup("You are within " + radius + " meters from this point").openPopup();
+
+    L.circle(e.latlng, radius).addTo(map2);
+}
+    L.marker([44.473294, -73.203171]).addTo(map2)
+        .bindPopup("Here be mobiledev.").openPopup();
+
+
+map2.on('locationfound', onLocationFound);
+</script>
+
+
+
+<h1><%=test%></h1>
+
+
+</div>
+
+
+
+</div>
+</div>
+
+<!-- ENDS shadow -->
+</div>
+
+
+<!-- MAIN -->
+<div id="main">
+<!-- wrapper-main -->
+<div class="wrapper">
+<!-- shadow -->
+<div class="aesthetic-shadow">
+<!-- aesthetic-thumb -->
+<div class="aesthetic-thumbnail">
+<!-- meta -->
+<ul class="meta">
+
+
+
+
+<!-- This will messily display all of the tweets on the page.
+
+Twitter should go here? 
+
+<%=stringTw%>
+
+ This will messily display all of the tweets on the page. -->
+
+
+
+
+
+
+
+<h1><b>Map3</b></h1>
+<li><strong>Default Location: </strong>Burlington, VT</li>
+<li><strong>Plugin:</strong> Leaflet</li>
+</ul>
+<button onclick="map3.locate({setView: true, maxZoom: 16});">Get Location</button>
+<!-- ENDS meta -->
+<!--
+<a href="aesthetic.html" class="cover"><img src="NULL" alt="Map-Goes-HERE" /></a>
+-->
+</div>
+<!-- ENDS aesthetic-thumb -->
+<!-- leaflet test stuff -->
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+<div id="map3">
+<style>
+#map3 { height: 400px; }
+</style>
+<script>
+var map3 = L.map('map3').setView([44.473294, -73.203171], 18);
+L.tileLayer('http://otile1.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
+attribution: '&copy; <a href="http://osm.org/copyright">OSM</a> and mapquest'
+}).addTo(map3);
+
+map3.on('locationfound', onLocationFound);
+
+function onLocationFound(e) {
+    var radius = e.accuracy / 2;
+
+    L.marker(e.latlng).addTo(map3)
+        .bindPopup("You are within " + radius + " meters from this point").openPopup();
+
+    L.circle(e.latlng, radius).addTo(map3);
+}
+    L.marker([44.473294, -73.203171]).addTo(map3)
+        .bindPopup("Here be mobiledev.").openPopup();
+
+
+map3.on('locationfound', onLocationFound);
+</script>
+
+
+
+<h1><%=test%></h1>
+
+
+</div>
+
+
+
+</div>
+</div>
+
+<!-- ENDS shadow -->
+</div>
+
 <!-- ENDS aesthetic -->
 <!-- aesthetic -->
 <div class="aesthetic">
